@@ -31,3 +31,13 @@ class AuditLog(Base):
     action = Column(String)
     filename = Column(String)
     created_at = Column(DateTime, server_default=func.now())
+    
+    
+class SharedDocument(Base):
+    __tablename__ = "shared_documents"
+
+    id = Column(Integer, primary_key=True, index=True)
+    document_id = Column(Integer, nullable=False)
+    owner_email = Column(String, nullable=False)
+    shared_with_email = Column(String, nullable=False)
+    created_at = Column(DateTime, server_default=func.now())

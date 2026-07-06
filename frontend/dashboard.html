@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocArmor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>📄 DocArmor</h2>
+    <button id="logoutBtn">Logout</button>
+</header>
+
+<div class="dashboard">
+
+    <div class="upload-card">
+        <h3>Upload PDF</h3>
+
+        <input type="file" id="pdfFile" accept=".pdf">
+
+        <button id="uploadBtn">Upload PDF</button>
+
+        <p id="uploadStatus"></p>
+    </div>
+
+    <div class="documents">
+        <h3>My Documents</h3>
+        <div id="ownedDocumentsContainer"></div>
+    </div>
+
+    <div class="documents">
+        <h3>Shared With Me</h3>
+        <div id="sharedDocumentsContainer"></div>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
